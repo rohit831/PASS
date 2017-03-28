@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:title="Wishlist" />
+        </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group"
+        >
+        <item
+            android:id="@+id/nav_sarees"
+            android:title="Sarees" />
+
+        <item
+            android:id="@+id/nav_suits"
+            android:title="Suits"
+            />
+        <item
+            android:id="@+id/nav_leggings"
+            android:title="Leggings" />
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="About Us" />
+    </group>
+</menu>
