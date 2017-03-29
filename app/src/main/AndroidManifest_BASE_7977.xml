@@ -18,11 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SareesCategory" />
-
-        <activity android:name=".SuitsCategory"></activity>
-
-        <activity android:name=".LeggingsCategory"></activity>
+        <activity android:name=".SareesCategory"></activity>
     </application>
 
 </manifest>

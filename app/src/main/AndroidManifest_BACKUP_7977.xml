@@ -19,10 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".SareesCategory" />
-
+<<<<<<< HEAD
         <activity android:name=".SuitsCategory"></activity>
-
+=======
         <activity android:name=".LeggingsCategory"></activity>
+>>>>>>> 610cd30e4cfd22e67468125fa3c083574a5b3d4c
     </application>
 
 </manifest>
