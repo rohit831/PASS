@@ -54,7 +54,7 @@ public class SareeCategoryAdapter extends RecyclerView.Adapter<SareeCategoryAdap
         public SareesCategoryViewHolder(View itemView) {
             super(itemView);
 
-            vh_category_saree_name=(TextView)itemView.findViewById(R.id.category_saree_name);
+            vh_category_saree_name=(TextView)itemView.findViewById(R.id.category_item_name);
 
         }
     }

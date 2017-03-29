@@ -102,6 +102,10 @@ public class HomeScreen extends AppCompatActivity
                 fragment=new SareesCategory();
                 break;
 
+            case R.id.nav_leggings:
+                fragment = new LeggingsCategory();
+                break;
+
             //Add rest cases here
         }
 
