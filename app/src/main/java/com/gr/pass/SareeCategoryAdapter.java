@@ -35,12 +35,12 @@ public class SareeCategoryAdapter extends RecyclerView.Adapter<SareeCategoryAdap
     public void onBindViewHolder(SareesCategoryViewHolder holder, int position) {
 
         holder.vh_category_saree_name.setText(categoryNames.get(position));
-        if(position%4==0 || position%4==3)
+        if(position%2==0 )
         {
-            holder.vh_category_saree_name.setBackground(context.getResources().getDrawable(R.drawable.border));
+            holder.vh_category_saree_name.setBackground(context.getResources().getDrawable(R.drawable.rectangle_shape_red));
         }
         else
-            holder.vh_category_saree_name.setBackground(context.getResources().getDrawable(R.drawable.border_grey));
+            holder.vh_category_saree_name.setBackground(context.getResources().getDrawable(R.drawable.rectangle_shape_grey));
     }
 
     @Override
