@@ -3,11 +3,12 @@ package com.gr.pass;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class SareesCategory extends AppCompatActivity {
+public class SareesCategory extends HomeScreen {
 
 
     private RecyclerView recyclerView;
@@ -30,8 +31,8 @@ public class SareesCategory extends AppCompatActivity {
         categoryNames.add("kanjeevaram");
         categoryNames.add("Banarasi");
 
-        adapter=new SareeCategoryAdapter(categoryNames);
-        layoutManager=new GridLayoutManager(this,2);
+        adapter=new SareeCategoryAdapter(this,categoryNames);
+        layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
