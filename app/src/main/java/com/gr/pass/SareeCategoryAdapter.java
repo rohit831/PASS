@@ -1,6 +1,8 @@
 package com.gr.pass;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +15,12 @@ import java.util.ArrayList;
 public class SareeCategoryAdapter extends RecyclerView.Adapter<SareeCategoryAdapter.SareesCategoryViewHolder> {
 
     ArrayList<String> categoryNames;
+    Context context;
 
-    public SareeCategoryAdapter(ArrayList<String> categoryNames)
+    public SareeCategoryAdapter(Context context, ArrayList<String> categoryNames)
     {
         this.categoryNames=categoryNames;
+        this.context = context;
     }
 
     @Override
@@ -31,12 +35,12 @@ public class SareeCategoryAdapter extends RecyclerView.Adapter<SareeCategoryAdap
     public void onBindViewHolder(SareesCategoryViewHolder holder, int position) {
 
         holder.vh_category_saree_name.setText(categoryNames.get(position));
-        if(position%2==0)
+        if(position%4==0 || position%4==3)
         {
-            holder.vh_category_saree_name.setBackgroundColor(Color.parseColor("f02b3d"));
+            holder.vh_category_saree_name.setBackground(context.getResources().getDrawable(R.drawable.border));
         }
         else
-            holder.vh_category_saree_name.setBackgroundColor(Color.parseColor("cdc8c9"));
+            holder.vh_category_saree_name.setBackground(context.getResources().getDrawable(R.drawable.border_grey));
     }
 
     @Override
@@ -51,6 +55,7 @@ public class SareeCategoryAdapter extends RecyclerView.Adapter<SareeCategoryAdap
             super(itemView);
 
             vh_category_saree_name=(TextView)itemView.findViewById(R.id.category_saree_name);
+
         }
     }
 }

@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class SareesCategory extends AppCompatActivity {
+public class SareesCategory extends HomeScreen {
 
 
     private RecyclerView recyclerView;
@@ -30,7 +30,7 @@ public class SareesCategory extends AppCompatActivity {
         categoryNames.add("kanjeevaram");
         categoryNames.add("Banarasi");
 
-        adapter=new SareeCategoryAdapter(categoryNames);
+        adapter=new SareeCategoryAdapter(this,categoryNames);
         layoutManager=new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
