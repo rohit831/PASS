@@ -1,5 +1,6 @@
 package com.gr.pass;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -62,8 +63,11 @@ public class HomeScreen extends AppCompatActivity
             Toast.makeText(this, "Home clicked!!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_wishlist) {
             Toast.makeText(this, "Wishlist clicked!!", Toast.LENGTH_SHORT).show();
+
         } else if (id == R.id.nav_sarees) {
             Toast.makeText(this, "Sarees clicked!!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this,SareesCategory.class));
+
         } else if (id == R.id.nav_suits) {
 
             Toast.makeText(this, "Suits clicked!!", Toast.LENGTH_SHORT).show();
