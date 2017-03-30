@@ -41,7 +41,8 @@ public class HomeScreen extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
          if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }
+         else {
             super.onBackPressed();
         }
     }
@@ -102,6 +103,9 @@ public class HomeScreen extends AppCompatActivity
                 fragment=new SareesCategory();
                 break;
 
+            case R.id.nav_suits:
+                fragment=new SuitsCategory();
+                break;
             case R.id.nav_leggings:
                 fragment = new LeggingsCategory();
                 break;

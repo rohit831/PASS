@@ -19,9 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SareesCategory" />
-
-        <activity android:name=".SuitsCategory"></activity>
-
         <activity android:name=".LeggingsCategory"></activity>
     </application>
 
