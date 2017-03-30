@@ -64,4 +64,10 @@ public class Login extends AppCompatActivity {
             finish();
         }
     }
+
+    public void register_here_onClick(View view){
+
+        startActivity(new Intent(this,Register.class));
+        finish();
+    }
 }
