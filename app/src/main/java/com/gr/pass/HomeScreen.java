@@ -3,18 +3,19 @@ package com.gr.pass;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.gr.pass.leggings.LeggingsCategory;
+import com.gr.pass.sarees.SareesCategory;
+import com.gr.pass.suits.SuitsCategory;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

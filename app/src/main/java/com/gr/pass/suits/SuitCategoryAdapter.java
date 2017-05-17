@@ -1,4 +1,4 @@
-package com.gr.pass;
+package com.gr.pass.suits;
 
 
 import android.content.Context;
@@ -8,14 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.gr.pass.model.Item;
+import com.gr.pass.R;
+
 import java.util.ArrayList;
 
 public class SuitCategoryAdapter extends RecyclerView.Adapter<SuitCategoryAdapter.SuitCategoryViewHolder> {
 
-    ArrayList<String> categoryNames;
+    ArrayList<Item> categoryNames;
     Context context;
 
-    public SuitCategoryAdapter(ArrayList<String> categoryNames, Context context) {
+    public SuitCategoryAdapter(Context context, ArrayList<Item> categoryNames) {
         this.categoryNames = categoryNames;
         this.context = context;
     }
@@ -31,7 +34,7 @@ public class SuitCategoryAdapter extends RecyclerView.Adapter<SuitCategoryAdapte
     @Override
     public void onBindViewHolder(SuitCategoryViewHolder holder, int position) {
 
-        holder.vh_category_suit_name.setText(categoryNames.get(position));
+        holder.vh_category_suit_name.setText(categoryNames.get(position).getCategory());
         if(position%4==0 || position%4==3 )
         {
             holder.vh_category_suit_name.setBackground(context.getResources().getDrawable(R.drawable.rectangle_shape_red));

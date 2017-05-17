@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#FFF"
     android:orientation="vertical"
-    tools:context="com.gr.pass.LeggingsCategory">
+    tools:context=".leggings.LeggingsCategory">
 
     <RelativeLayout
         android:layout_width="match_parent"

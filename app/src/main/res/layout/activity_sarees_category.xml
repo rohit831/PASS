@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#FFF"
     android:orientation="vertical"
-    tools:context="com.gr.pass.SareesCategory">
+    tools:context=".sarees.SareesCategory">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,11 +48,21 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"/>
 
-    <android.support.v7.widget.RecyclerView
+    <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:id="@+id/recycler_view_category_sarees"
         android:layout_height="0dp"
         android:layout_weight="8"
-        android:layout_margin="5dp"></android.support.v7.widget.RecyclerView>
+        android:layout_margin="5dp"
+        android:id="@+id/refreh_recycler_view_category_sarees">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycler_view_category_sarees"
+            android:layout_height="match_parent"
+            />
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

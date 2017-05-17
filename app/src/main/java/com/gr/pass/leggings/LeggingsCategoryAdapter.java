@@ -1,4 +1,4 @@
-package com.gr.pass;
+package com.gr.pass.leggings;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.gr.pass.model.Item;
+import com.gr.pass.R;
 
 import java.util.ArrayList;
 
@@ -15,10 +18,10 @@ import java.util.ArrayList;
 
 public class LeggingsCategoryAdapter extends RecyclerView.Adapter<LeggingsCategoryAdapter.LeggingsCategoryViewHolder> {
 
-    ArrayList<String> categoryNames;
+    ArrayList<Item> categoryNames;
     Context context;
 
-    public LeggingsCategoryAdapter(Context context, ArrayList<String> categoryNames) {
+    public LeggingsCategoryAdapter(Context context, ArrayList<Item> categoryNames) {
         this.categoryNames = categoryNames;
         this.context = context;
     }
@@ -34,8 +37,8 @@ public class LeggingsCategoryAdapter extends RecyclerView.Adapter<LeggingsCatego
     @Override
     public void onBindViewHolder(LeggingsCategoryAdapter.LeggingsCategoryViewHolder holder, int position) {
 
-        holder.vh_category_legging_name.setText(categoryNames.get(position));
-        if (position % 2 == 0) {
+        holder.vh_category_legging_name.setText(categoryNames.get(position).getCategory());
+        if (position % 4 == 0 || position%4 == 3) {
             holder.vh_category_legging_name.setBackground(context.getResources().getDrawable(R.drawable.rectangle_shape_red));
         } else
             holder.vh_category_legging_name.setBackground(context.getResources().getDrawable(R.drawable.rectangle_shape_grey));

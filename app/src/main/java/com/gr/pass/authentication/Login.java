@@ -1,4 +1,4 @@
-package com.gr.pass;
+package com.gr.pass.authentication;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.gr.pass.HomeScreen;
+import com.gr.pass.R;
 
 public class Login extends AppCompatActivity {
 
